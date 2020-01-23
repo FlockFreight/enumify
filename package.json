@@ -11,15 +11,16 @@
   "types": "./dist/src/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist/*",
-    "build": "tsc",
-    "watch": "tsc --watch",
+    "build": "tsc --downlevelIteration",
+    "watch": "tsc --downlevelIteration --watch",
     "test": "mocha --ui qunit",
     "testall": "mocha --ui qunit dist/test",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "devDependencies": {
-    "@types/node": "^13.1.6",
     "@types/mocha": "^5.2.7",
-    "mocha": "^7.0.0"
+    "@types/node": "^13.1.6",
+    "mocha": "^7.0.0",
+    "typescript": "3.7.5"
   }
 }
